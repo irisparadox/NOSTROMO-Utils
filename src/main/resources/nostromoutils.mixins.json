@@ -4,6 +4,7 @@
   "package": "net.paradoxsubject.nostromoutils.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "utilsItem.NetheriteToolsRework"
   ],
   "client": [
     "ExampleMixin"

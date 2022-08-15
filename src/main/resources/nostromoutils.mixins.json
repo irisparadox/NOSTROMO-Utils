@@ -6,9 +6,7 @@
   "mixins": [
     "utilsItem.NetheriteToolsRework"
   ],
-  "client": [
-    "ExampleMixin"
-  ],
+  "client": [],
   "injectors": {
     "defaultRequire": 1
   }

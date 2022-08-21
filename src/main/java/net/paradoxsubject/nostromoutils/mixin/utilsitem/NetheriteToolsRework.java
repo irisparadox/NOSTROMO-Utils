@@ -1,4 +1,4 @@
-package net.paradoxsubject.nostromoutils.mixin.utilsItem;
+package net.paradoxsubject.nostromoutils.mixin.utilsitem;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.enchantment.EnchantmentHelper;

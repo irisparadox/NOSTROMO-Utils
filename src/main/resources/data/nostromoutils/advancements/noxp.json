@@ -1,0 +1,163 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:anvil"
+    },
+    "title": "No xp?",
+    "description": "Create an armor which has every possible enchantment",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "parent": "minecraft:adventure/root",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:player"
+            }
+          }
+        ],
+        "items": [
+          {
+            "enchantments": [
+              {
+                "enchantment": "minecraft:aqua_affinity"
+              },
+              {
+                "enchantment": "minecraft:respiration",
+                "levels": 3
+              },
+              {
+                "enchantment": "minecraft:protection",
+                "levels": 4
+              },
+              {
+                "enchantment": "minecraft:fire_protection",
+                "levels": 4
+              },
+              {
+                "enchantment": "minecraft:blast_protection",
+                "levels": 4
+              },
+              {
+                "enchantment": "minecraft:projectile_protection",
+                "levels": 4
+              },
+              {
+                "enchantment": "minecraft:mending"
+              },
+              {
+                "enchantment": "minecraft:unbreaking",
+                "levels": 3
+              }
+            ]
+          },
+          {
+            "enchantments": [
+              {
+                "enchantment": "minecraft:protection",
+                "levels": 4
+              },
+              {
+                "enchantment": "minecraft:fire_protection",
+                "levels": 4
+              },
+              {
+                "enchantment": "minecraft:blast_protection",
+                "levels": 4
+              },
+              {
+                "enchantment": "minecraft:projectile_protection",
+                "levels": 4
+              },
+              {
+                "enchantment": "minecraft:mending"
+              },
+              {
+                "enchantment": "minecraft:unbreaking",
+                "levels": 3
+              }
+            ]
+          },
+          {
+            "enchantments": [
+              {
+                "enchantment": "minecraft:protection",
+                "levels": 4
+              },
+              {
+                "enchantment": "minecraft:fire_protection",
+                "levels": 4
+              },
+              {
+                "enchantment": "minecraft:blast_protection",
+                "levels": 4
+              },
+              {
+                "enchantment": "minecraft:projectile_protection",
+                "levels": 4
+              },
+              {
+                "enchantment": "minecraft:swift_sneak",
+                "levels": 3
+              },
+              {
+                "enchantment": "minecraft:mending"
+              },
+              {
+                "enchantment": "minecraft:unbreaking",
+                "levels": 3
+              }
+            ]
+          },
+          {
+            "enchantments": [
+              {
+                "enchantment": "minecraft:protection",
+                "levels": 4
+              },
+              {
+                "enchantment": "minecraft:fire_protection",
+                "levels": 4
+              },
+              {
+                "enchantment": "minecraft:blast_protection",
+                "levels": 4
+              },
+              {
+                "enchantment": "minecraft:projectile_protection",
+                "levels": 4
+              },
+              {
+                "enchantment": "minecraft:feather_falling",
+                "levels": 4
+              },
+              {
+                "enchantment": "minecraft:depth_strider",
+                "levels": 3
+              },
+              {
+                "enchantment": "minecraft:soul_speed",
+                "levels": 3
+              },
+              {
+                "enchantment": "minecraft:mending"
+              },
+              {
+                "enchantment": "minecraft:unbreaking",
+                "levels": 3
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

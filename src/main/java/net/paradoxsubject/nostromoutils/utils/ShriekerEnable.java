@@ -26,8 +26,13 @@ import static net.minecraft.state.property.Properties.CAN_SUMMON;
 
 public class ShriekerEnable implements UseBlockCallback {
 
-    public final SoundEvent END_FILL = SoundEvents.BLOCK_END_PORTAL_FRAME_FILL;
-    public final SoundEvent CATALYST_BLOOM = SoundEvents.BLOCK_SCULK_CATALYST_BLOOM;
+    public static final SoundEvent WARDEN_CLOSEST = SoundEvents.ENTITY_WARDEN_NEARBY_CLOSEST;
+    public static final SoundEvent VALLEY_MOOD = SoundEvents.AMBIENT_SOUL_SAND_VALLEY_MOOD;
+    public static final SoundEvent ALLAY_ITEM = SoundEvents.ENTITY_ALLAY_AMBIENT_WITH_ITEM;
+    public static final SoundEvent BELL_RESONATE = SoundEvents.BLOCK_BELL_RESONATE;
+    public static final SoundEvent CATALYST_BLOOM = SoundEvents.BLOCK_SCULK_CATALYST_BLOOM;
+    public static final SoundEvent AMETHYST_CHIME = SoundEvents.BLOCK_AMETHYST_BLOCK_CHIME;
+    public static final SoundCategory BLOCKS = SoundCategory.BLOCKS;
 
     /**
      * Has a probability of 8.33% success that the Shrieker will be enabled after using an Echo Shard item on the block.
@@ -54,7 +59,13 @@ public class ShriekerEnable implements UseBlockCallback {
                     if (serverWorld.random.nextBetween(1, 12) == 5) {
                         Criteria.ITEM_USED_ON_BLOCK.trigger((ServerPlayerEntity) player, pos, itemHand);
                         serverWorld.setBlockState(pos, state.with(CAN_SUMMON, true), Block.NOTIFY_ALL);
-                        serverWorld.playSound(null, pos, END_FILL, SoundCategory.BLOCKS, 1f, 1f);
+                        serverWorld.playSound(null, pos, WARDEN_CLOSEST, BLOCKS, 2f, 1f);
+                        serverWorld.playSound(null, pos, VALLEY_MOOD, BLOCKS, 1f, 1f);
+                        serverWorld.playSound(null, pos, ALLAY_ITEM, BLOCKS, 1f, 0.5f);
+                        serverWorld.playSound(null, pos, BELL_RESONATE, BLOCKS, 2f, 0.5f);
+                        serverWorld.playSound(null, pos, BELL_RESONATE, BLOCKS, 2f, 0.65f);
+                        serverWorld.playSound(null, pos, BELL_RESONATE, BLOCKS, 2f, 0.85f);
+                        serverWorld.playSound(null, pos, BELL_RESONATE, BLOCKS, 2f, 1f);
                         serverWorld.emitGameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Emitter.of(player, state));
                     }
                     serverPlayer.increaseStat(Stats.USED.getOrCreateStat(Items.ECHO_SHARD), 1);
@@ -69,7 +80,9 @@ public class ShriekerEnable implements UseBlockCallback {
                                          0.2,
                                          0.0);
                     float r_catalystPitch = 0.6f + serverWorld.random.nextFloat() * 0.4f;
-                    serverWorld.playSound(null, pos, CATALYST_BLOOM, SoundCategory.BLOCKS, 2.0f, r_catalystPitch);
+                    float r_amethystPitch = 0.5f + serverWorld.random.nextFloat() * 0.2f;
+                    serverWorld.playSound(null, pos, CATALYST_BLOOM, BLOCKS, 2.0f, r_catalystPitch);
+                    serverWorld.playSound(null, pos, AMETHYST_CHIME, BLOCKS, 2.0f, r_amethystPitch);
                 }
 
                 if (!player.getAbilities().creativeMode) {

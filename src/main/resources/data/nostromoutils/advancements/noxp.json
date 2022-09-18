@@ -10,7 +10,7 @@
     "announce_to_chat": true,
     "hidden": true
   },
-  "parent": "minecraft:adventure/root",
+  "parent": "minecraft:story/enchant_item",
   "criteria": {
     "requirement": {
       "trigger": "minecraft:inventory_changed",

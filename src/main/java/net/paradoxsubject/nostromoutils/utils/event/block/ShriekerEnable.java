@@ -1,4 +1,4 @@
-package net.paradoxsubject.nostromoutils.utils;
+package net.paradoxsubject.nostromoutils.utils.event.block;
 
 import net.fabricmc.fabric.api.event.player.UseBlockCallback;
 import net.minecraft.advancement.criterion.Criteria;

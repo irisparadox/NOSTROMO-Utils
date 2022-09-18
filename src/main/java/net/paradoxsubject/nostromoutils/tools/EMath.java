@@ -1,4 +1,4 @@
-package net.paradoxsubject.nostromoutils;
+package net.paradoxsubject.nostromoutils.tools;
 
 public class EMath {
     /**

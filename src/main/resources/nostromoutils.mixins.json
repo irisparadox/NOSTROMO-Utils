@@ -4,14 +4,17 @@
   "package": "net.paradoxsubject.nostromoutils.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "utilsitem.NetheriteToolsRework",
+    "utilsitem.NetheriteToolsRework"
+  ],
+  "server": [
+    "utilsenchantments.anvillock.EnchantmentLimit",
     "utilsenchantments.disablelocks.DisableProtectionLock",
     "utilsenchantments.disablelocks.DisableInfinityLock",
-    "utilsenchantments.disablelocks.DisableDamageLock",
-    "utilsenchantments.anvillock.DisableTooExpensive",
-    "utilsenchantments.anvillock.EnchantmentLimit"
+    "utilsenchantments.disablelocks.DisableDamageLock"
   ],
-  "client": [],
+  "client": [
+    "utilsenchantments.anvillock.DisableTooExpensive"
+  ],
   "injectors": {
     "defaultRequire": 1
   }

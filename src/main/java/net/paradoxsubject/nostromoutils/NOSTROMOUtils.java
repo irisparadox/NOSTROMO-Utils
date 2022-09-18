@@ -2,7 +2,7 @@ package net.paradoxsubject.nostromoutils;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.player.UseBlockCallback;
-import net.paradoxsubject.nostromoutils.utils.ShriekerEnable;
+import net.paradoxsubject.nostromoutils.utils.event.block.ShriekerEnable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
